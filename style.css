@@ -1,0 +1,416 @@
+/* Deep Romantic Purple & Soft Pink Styling */
+:root {
+    --bg-gradient: linear-gradient(135deg, #1a0b2e 0%, #462066 50%, #ff758c 100%);
+    --pink-accent: #ff758c;
+    --soft-pink: #ff7eb3;
+    --glass-bg: rgba(255, 255, 255, 0.12);
+    --glass-border: rgba(255, 255, 255, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Background Hearts Animation */
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    top: -50px;
+    animation: fall linear infinite;
+    text-shadow: 0 0 5px rgba(255, 117, 140, 0.5);
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* Smooth Floating Animations */
+.floating {
+    animation: floating 4s ease-in-out infinite;
+}
+
+.floating-slow {
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.pulsing {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 126, 179, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255, 126, 179, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 126, 179, 0); }
+}
+
+/* Ensure content stays above hearts */
+header, main, .scroll-warning {
+    position: relative;
+    z-index: 10;
+}
+
+/* Scroll Warning Banner */
+.scroll-warning {
+    position: fixed;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff4757;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.scroll-warning.show {
+    top: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-titles .date-tag {
+    font-size: 1.5rem;
+    color: #fbc531;
+    letter-spacing: 2px;
+}
+
+.header-titles .main-tag {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 120, 150, 0.9);
+}
+
+/* Cake CSS */
+.cake-container {
+    position: relative;
+    margin: 40px 0;
+}
+
+.cake {
+    position: relative;
+    width: 220px;
+    height: 140px;
+}
+
+.plate {
+    width: 270px;
+    height: 15px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: -25px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+.layer {
+    position: absolute;
+    width: 220px;
+    border-radius: 10px 10px 0 0;
+}
+
+.layer-bottom {
+    height: 50px;
+    bottom: 0;
+    background: #4a1954;
+}
+
+.layer-middle {
+    height: 50px;
+    bottom: 45px;
+    background: #ff758c;
+}
+
+.layer-top {
+    height: 50px;
+    bottom: 90px;
+    background: #ff7eb3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hbd-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Candles & Flame */
+.candles-group {
+    position: absolute;
+    top: -35px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.candle {
+    width: 12px;
+    height: 35px;
+    background: repeating-linear-gradient(45deg, #fff, #fff 5px, #ff4757 5px, #ff4757 10px);
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.flame {
+    width: 14px;
+    height: 20px;
+    background: #ff9f1a;
+    border-radius: 50% 50% 20% 20%;
+    position: absolute;
+    top: -22px;
+    left: -1px;
+    box-shadow: 0 0 15px #ff9f1a, 0 0 25px #ff9f1a;
+    animation: flicker 0.6s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { transform: scale(1); opacity: 0.9; }
+    100% { transform: scale(1.15); opacity: 1; }
+}
+
+.mic-status-box {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Main Content */
+.main-content {
+    opacity: 0; 
+    transform: translateY(30px);
+    transition: all 1s ease;
+    padding: 20px 15px;
+}
+
+.wish-section {
+    padding: 80px 20px;
+}
+
+.glow-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 20px #ff7eb3, 0 0 30px #ff7eb3;
+    margin-bottom: 15px;
+}
+
+.sub-glow-text {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #f1f2f6;
+    line-height: 1.5;
+}
+
+/* Photo Gallery & Quotes */
+.gallery-section {
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+.section-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #ffdda1;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+.photo-card {
+    position: relative;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.7);
+    transition: filter 0.4s ease;
+}
+
+.photo-card:hover img {
+    filter: brightness(0.9);
+}
+
+.quote-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    pointer-events: none;
+}
+
+/* Premium Romantic Chat UI */
+.memories-section {
+    max-width: 750px;
+    margin: 80px auto;
+    text-align: left;
+}
+
+.chat-wrapper {
+    background: rgba(20, 10, 35, 0.75);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.chat-chapter {
+    margin-bottom: 40px;
+}
+
+.chapter-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+}
+
+.alert-badge {
+    background: linear-gradient(90deg, #e84118, #c23616);
+    box-shadow: 0 4px 15px rgba(232, 65, 24, 0.4);
+}
+
+.chat-bubble {
+    max-width: 85%;
+    margin-bottom: 18px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    position: relative;
+    line-height: 1.5;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.chat-bubble.left {
+    background: rgba(255, 255, 255, 0.15);
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+    margin-right: auto;
+}
+
+.chat-bubble.right {
+    background: linear-gradient(135deg, #8e44ad, #d35400);
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+    margin-left: auto;
+}
+
+.sender-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #fbc531;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.chat-time {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.7);
+    float: right;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.love-note-card {
+    margin-top: 40px;
+    background: linear-gradient(135deg, rgba(255,117,140,0.25), rgba(255,126,179,0.35));
+    border: 1px solid #ff758c;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.love-note-card .highlight-line {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #ffdda1;
+    font-size: 1.4rem;
+    font-family: 'Dancing Script', cursive;
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Princess Hira 👑</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Confetti Library for Celebration -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="no-scroll">
+
+    <!-- Animated Background Hearts -->
+    <div id="hearts-container"></div>
+
+    <!-- Scroll Warning Banner -->
+    <div id="scroll-warning" class="scroll-warning">
+        Candles bujhao Phonk mar k 🌬️🎂
+    </div>
+
+    <!-- Hero Section with Cake -->
+    <header class="hero-section">
+        <div class="header-titles floating">
+            <h3 class="date-tag">13 August</h3>
+            <h1 class="main-tag">Meri Princess ka Birthday 👑</h1>
+        </div>
+
+        <div class="cake-container floating-slow">
+            <div class="cake">
+                <div class="plate"></div>
+                <div class="layer layer-bottom"></div>
+                <div class="layer layer-middle"></div>
+                <div class="layer layer-top">
+                    <span class="hbd-text">HBD Hira</span>
+                </div>
+                <div class="icing"></div>
+                
+                <!-- 3 Candles -->
+                <div class="candles-group">
+                    <div class="candle">
+                        <div class="flame" id="flame1"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame" id="flame2"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame" id="flame3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mic-status-box pulsing" id="micStatus">
+            🎙️ Mic Permission Processing... Phonk Marain Candle Bujhane K Liye!
+        </div>
+    </header>
+
+    <!-- Main Content (Unlocked after blowing candles) -->
+    <main id="mainContent" class="main-content">
+        
+        <!-- Wishes Section -->
+        <section class="wish-section" id="wishSection">
+            <h2 class="glow-text floating">Happy Birthday Meri Heer 😘</h2>
+            <h3 class="sub-glow-text floating-slow">I Love You Meri Princess 👑.<br>Forever Endever And Ever.</h3>
+        </section>
+
+        <!-- Quotes & Aesthetic Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="section-title floating">Beautiful Realities</h2>
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <div class="photo-card floating">
+                    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80" alt="Love Image">
+                    <div class="quote-overlay">"Tum meri zindagi ka sab se khoobsurat hissa ho."</div>
+                </div>
+                <!-- Card 2 -->
+                <div class="photo-card floating-slow">
+                    <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=800&q=80" alt="Nature Love">
+                    <div class="quote-overlay">"Duniya ki har khushi tumhare qadmon me ho."</div>
+                </div>
+                <!-- Card 3 -->
+                <div class="photo-card floating">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80" alt="Together">
+                    <div class="quote-overlay">"Hamesha muskurati raho, Meri Heer."</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memories Chat Section -->
+        <section class="memories-section">
+            <h2 class="section-title floating">Memories 💕</h2>
+            
+            <div class="chat-wrapper">
+                <!-- Chapter 1 -->
+                <div class="chat-chapter">
+                    <div class="chapter-badge">Sweet Conversations</div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/20/22, 9:32 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hira</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/20/22, 9:32 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>G aadi</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/20/22, 9:33 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Mujhy neend a jay phir??</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/20/22, 9:33 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Koi bt ni aadi<br>Mn kam kr ln gi</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/20/22, 9:33 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Konsa</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/20/22, 9:33 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>ap ko uthany ka 🤣<br>so bh gy ☹️<br>Aadi abhi sy ☹️</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/20/22, 9:37 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>good night bh ni bola kch bh ni bola 😕😕😕 ok soyin gd nyt<br>bt e na kren bs</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/20/22, 9:38 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Acha suny uth k preshan ni ho jana mn nraz ni hon 😘😘</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="chat-chapter">
+                    <div class="chapter-badge alert-badge">Hard Time</div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hira mujh ma itni himat Kaha sy ay gi😢 DOA krna</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>rishta abhi pkka ni ho jy ga pr mn chahti b ni hon koi mujy dekhny ay aadi<br>mn ny b phli br himmat ki h</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hmmm</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>or kisi ka kha h ghr yhi mujy psnd h</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:29 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Kisny??<br>Hmm Prhty howy btaya tha</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:29 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Asad ko btaya kh hira ny ghr bt ki h<br>m ny kha mn ny b phli br himmat ki hai kh koi mujy psnd h</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:30 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>ammi ny yh to ni kha ap ni psnd 🥰</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:30 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Ye b to ni Kaha k pasand hy<br>Kehta daikh lo yar Ami Kuch kahy naa</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:31 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>to ap ky ghar ni pta ap logun ka socha kh kea khen gy ghr waly o nii zra b ni ☹️☹️</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:31 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Ni ni Asad keh rha tha k Ami Roy gi</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:32 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Or kha log kea khen gy wasby waly<br>yh to ni kha kesa lrka h yon h ap k bary mn to asa wesa kch ni kha</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:33 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hn SB drain Gy isi bat sy k log Kia kahian gy</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:33 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>hmm pr logun ka kea krna h hum ny yh ni sochen gy hmari life h 😕<br>ammi ny yh bh kha soch lo wasby ki bt h</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Soch lo mtlab Acha</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>bs yhi bola ap ki ammi ka pta ni kea reaction 🥹</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heartfelt Closing Note -->
+            <div class="love-note-card floating">
+                <p>Sad na Howa krian Meri Jan aap is chat ko parh k sochain Konsa time mushkil ha pehly Wala ya ab Wala 😘😘😘</p>
+                <p class="highlight-line">Main tb b apni Heer k Sath tha aj b hon or hmesha rho ga 😘😘</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Generating Animated Hearts in Background
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+                heart.style.opacity = Math.random() * 0.5 + 0.1;
+                heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+                container.appendChild(heart);
+            }
+        }
+        createHearts();
+
+        // JS Logic for Mic, Blowing Candles, & Scroll Control
+        let candleBlown = false;
+        const scrollWarning = document.getElementById('scroll-warning');
+
+        window.addEventListener('wheel', checkScroll, { passive: false });
+        window.addEventListener('touchmove', checkScroll, { passive: false });
+        window.addEventListener('keydown', function(e) {
+            if (['ArrowDown', 'PageDown', 'Space'].includes(e.code) && !candleBlown) {
+                e.preventDefault();
+                showWarning();
+            }
+        });
+
+        function checkScroll(e) {
+            if (!candleBlown) {
+                e.preventDefault();
+                showWarning();
+            }
+        }
+
+        function showWarning() {
+            scrollWarning.classList.add('show');
+            setTimeout(() => {
+                scrollWarning.classList.remove('show');
+            }, 2000);
+        }
+
+        // Microphone Blowing Detection
+        async function initMicPermission() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                document.getElementById('micStatus').innerText = "🎙️ Mic Active! Phonk Marain (Blow into mic) 🌬️";
+                document.getElementById('micStatus').classList.remove('pulsing');
+                
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const analyser = audioContext.createAnalyser();
+                const microphone = audioContext.createMediaStreamSource(stream);
+                microphone.connect(analyser);
+                analyser.fftSize = 256;
+
+                const bufferLength = analyser.frequencyBinCount;
+                const dataArray = new Uint8Array(bufferLength);
+
+                function detectBlow() {
+                    if (candleBlown) return;
+
+                    analyser.getByteFrequencyData(dataArray);
+                    let sum = 0;
+                    for (let i = 0; i < bufferLength; i++) {
+                        sum += dataArray[i];
+                    }
+                    let average = sum / bufferLength;
+
+                    // Threshold for blowing detection
+                    if (average > 55) { 
+                        extinguishCandles();
+                    }
+                    requestAnimationFrame(detectBlow);
+                }
+
+                detectBlow();
+
+            } catch (err) {
+                console.error('Mic access denied:', err);
+                document.getElementById('micStatus').innerText = "⚠️ Please Allow Microphone Access to Blow Candles!";
+            }
+        }
+
+        function extinguishCandles() {
+            candleBlown = true;
+            document.querySelectorAll('.flame').forEach(flame => {
+                flame.style.display = 'none';
+            });
+
+            document.body.classList.remove('no-scroll');
+            document.getElementById('micStatus').innerText = "🎉 Yay! Happy Birthday My Princess! 🎉";
+            
+            // Trigger Confetti Celebration
+            triggerConfetti();
+
+            // Auto Scroll to Wishes Section
+            setTimeout(() => {
+                document.getElementById('mainContent').style.opacity = '1';
+                document.getElementById('mainContent').style.transform = 'translateY(0)';
+                document.getElementById('wishSection').scrollIntoView({ behavior: 'smooth' });
+            }, 800);
+        }
+
+        function triggerConfetti() {
+            var duration = 4000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#ff7eb3', '#ff758c', '#ffffff']
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#ff7eb3', '#ff758c', '#ffffff']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        window.addEventListener('DOMContentLoaded', initMicPermission);
+    </script>
+</body>
+</html>
