@@ -16,9 +16,9 @@
     <audio id="bgMusic" loop preload="auto">
         <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112328.mp3" type="audio/mpeg">
     </audio>
-    <!-- Fireworks & Celebration Sound -->
+    <!-- Fireworks Celebration Sound Effect -->
     <audio id="fireworkSound" preload="auto">
-        <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_12b3c4f74d.mp3?filename=fireworks-6202.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8b9d3b4e6.mp3?filename=fireworks-explode-102728.mp3" type="audio/mpeg">
     </audio>
     <!-- Clapping Sound Effect -->
     <audio id="cheerSound" preload="auto">
@@ -79,23 +79,23 @@
             <h3 class="sub-glow-text floating-slow">I Love You Meri Princess 👑.<br>Forever Endever And Ever.</h3>
         </section>
 
-        <!-- Quotes & Aesthetic Gallery Section -->
+        <!-- Quotes & Aesthetic Gallery Section (Non-Person Aesthetic Images) -->
         <section class="gallery-section">
             <h2 class="section-title floating">Precious Moments</h2>
             <div class="gallery-grid">
                 <!-- Card 1 -->
                 <div class="photo-card floating">
-                    <img src="images/hira1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80';" alt="Love Image">
+                    <img src="images/hira1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80';" alt="Love Hearts">
                     <div class="quote-overlay">"Tum meri zindagi ka sab se khoobsurat hissa ho."</div>
                 </div>
-                <!-- Card 2 -->
+                <!-- Card 2 (Replaced with Romantic Rose Flowers) -->
                 <div class="photo-card floating-slow">
-                    <img src="images/hira2.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';" alt="Nature Love">
+                    <img src="images/hira2.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80';" alt="Romantic Roses">
                     <div class="quote-overlay">"Duniya ki har khushi tumhare qadmon me ho."</div>
                 </div>
-                <!-- Card 3 -->
+                <!-- Card 3 (Replaced with Aesthetic Heart Lights Sky) -->
                 <div class="photo-card floating">
-                    <img src="images/hira3.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80';" alt="Together">
+                    <img src="images/hira3.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80';" alt="Aesthetic Fireworks & Lights">
                     <div class="quote-overlay">"Hamesha muskurati raho, Meri Heer."</div>
                 </div>
             </div>
@@ -473,9 +473,9 @@
                 flame.style.display = 'none';
             });
 
-            // Play Fireworks & Clapping Sounds
-            fireworkSound.volume = 0.8;
-            cheerSound.volume = 0.7;
+            // Play Fireworks Crackers & Clapping SFX
+            fireworkSound.volume = 1.0;
+            cheerSound.volume = 0.8;
             fireworkSound.play().catch(e => console.log(e));
             cheerSound.play().catch(e => console.log(e));
 
@@ -497,21 +497,21 @@
         }
 
         function triggerConfetti() {
-            var duration = 5000;
+            var duration = 6000;
             var end = Date.now() + duration;
 
             (function frame() {
                 confetti({
-                    particleCount: 7,
+                    particleCount: 8,
                     angle: 60,
-                    spread: 60,
+                    spread: 70,
                     origin: { x: 0 },
                     colors: ['#ff7eb3', '#ff758c', '#ffffff', '#fbc531']
                 });
                 confetti({
-                    particleCount: 7,
+                    particleCount: 8,
                     angle: 120,
-                    spread: 60,
+                    spread: 70,
                     origin: { x: 1 },
                     colors: ['#ff7eb3', '#ff758c', '#ffffff', '#fbc531']
                 });
