@@ -6,25 +6,34 @@
     <title>Happy Birthday My Princess Hira 👑</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Confetti Library for Celebration -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body class="no-scroll">
 
-    <!-- Audio Files -->
-    <!-- Aap apni pasand ka music URL yahan change kar sakte hain -->
-    <audio id="bgMusic" loop>
-        <source src="https://actions.google.com/sounds/v1/ambiences/romantic_music.ogg" type="audio/ogg">
+    <!-- Audio Elements -->
+    <!-- Soft Romantic Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112328.mp3" type="audio/mpeg">
     </audio>
-    <audio id="fireworkSound">
-        <source src="https://actions.google.com/sounds/v1/foley/fireworks_whistle.ogg" type="audio/ogg">
+    <!-- Fireworks & Celebration Sound -->
+    <audio id="fireworkSound" preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_12b3c4f74d.mp3?filename=fireworks-6202.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Clapping Sound Effect -->
+    <audio id="cheerSound" preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a2b53f.mp3?filename=applause-cheering-101181.mp3" type="audio/mpeg">
     </audio>
 
+    <!-- Falling Hearts Container -->
     <div id="hearts-container"></div>
 
+    <!-- Scroll Warning Banner -->
     <div id="scroll-warning" class="scroll-warning">
         Candles bujhao Phonk mar k 🌬️🎂
     </div>
 
+    <!-- Hero Section with Cake -->
     <header class="hero-section">
         <div class="header-titles floating">
             <h3 class="date-tag">13 August</h3>
@@ -36,12 +45,22 @@
                 <div class="plate"></div>
                 <div class="layer layer-bottom"></div>
                 <div class="layer layer-middle"></div>
-                <div class="layer layer-top"><span class="hbd-text">HBD Hira</span></div>
+                <div class="layer layer-top">
+                    <span class="hbd-text">HBD Hira</span>
+                </div>
                 <div class="icing"></div>
+                
+                <!-- 3 Candles -->
                 <div class="candles-group">
-                    <div class="candle"><div class="flame" id="flame1"></div></div>
-                    <div class="candle"><div class="flame" id="flame2"></div></div>
-                    <div class="candle"><div class="flame" id="flame3"></div></div>
+                    <div class="candle">
+                        <div class="flame" id="flame1"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame" id="flame2"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame" id="flame3"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,37 +70,370 @@
         </div>
     </header>
 
+    <!-- Main Content (Unlocked after blowing candles) -->
     <main id="mainContent" class="main-content">
-        <!-- Content same as previous version... -->
+        
+        <!-- Wishes Section -->
+        <section class="wish-section" id="wishSection">
+            <h2 class="glow-text floating">Happy Birthday Meri Heer 😘</h2>
+            <h3 class="sub-glow-text floating-slow">I Love You Meri Princess 👑.<br>Forever Endever And Ever.</h3>
+        </section>
+
+        <!-- Quotes & Aesthetic Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="section-title floating">Precious Moments</h2>
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <div class="photo-card floating">
+                    <img src="images/hira1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80';" alt="Love Image">
+                    <div class="quote-overlay">"Tum meri zindagi ka sab se khoobsurat hissa ho."</div>
+                </div>
+                <!-- Card 2 -->
+                <div class="photo-card floating-slow">
+                    <img src="images/hira2.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';" alt="Nature Love">
+                    <div class="quote-overlay">"Duniya ki har khushi tumhare qadmon me ho."</div>
+                </div>
+                <!-- Card 3 -->
+                <div class="photo-card floating">
+                    <img src="images/hira3.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80';" alt="Together">
+                    <div class="quote-overlay">"Hamesha muskurati raho, Meri Heer."</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memories Chat Section -->
+        <section class="memories-section">
+            <h2 class="section-title floating">Memories 💕</h2>
+            
+            <div class="chat-wrapper">
+                <!-- Chapter 1 -->
+                <div class="chat-chapter">
+                    <div class="chapter-badge">Sweet Conversations</div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/20/22, 9:32 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hira</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/20/22, 9:32 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>G aadi</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/20/22, 9:33 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Mujhy neend a jay phir??</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/20/22, 9:33 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Koi bt ni aadi</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/20/22, 9:33 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Mn kam kr ln gi</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/20/22, 9:33 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Konsa</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/20/22, 9:33 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>ap ko uthany ka 🤣</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/20/22, 9:34 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>so bh gy ☹️</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/20/22, 9:36 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Aadi</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/20/22, 9:36 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>abhi sy ☹️</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/20/22, 9:37 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>good night bh ni bola kch bh ni bola 😕😕😕 ok soyin gd nyt</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/20/22, 9:37 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>bt e na kren bs</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/20/22, 9:38 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Acha suny uth k preshan ni ho jana mn nraz ni hon 😘😘</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="chat-chapter">
+                    <div class="chapter-badge alert-badge">Hard Time</div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hira mujh ma itni himat Kaha sy ay gi😢</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>DOA krna</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>rishta abhi pkka ni ho jy ga pr mn chahti b ni hon koi mujy dekhny ay aadi</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>mn ny b phli br himmat ki h</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hmmm</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>or kisi ka kha h ghr</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:28 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>yhi mujy psnd h</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:29 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Kisny??</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:29 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Asad ko btaya kh hira ny ghr bt ki h</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:29 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hmm</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:29 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Prhty howy btaya tha</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:29 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>m ny kha mn ny b phli br himmat ki hai kh koi mujy psnd h</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:30 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hmmm</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:30 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>ammi ny yh to ni kha ap ni psnd 🥰</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:30 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Ye b to ni Kaha k pasand hy</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:30 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>kea kha us ny</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:30 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Kehta daikh lo yar Ami Kuch kahy naa</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:31 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Ami roii phir??</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:31 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>to ap ky ghar ni pta ap logun ka socha kh kea khen gy ghr waly</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:31 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>o nii zra b ni</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:31 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>☹️☹️</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:31 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Ni ni Asad keh rha tha k Ami Roy gi</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:31 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>☹️☹️</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:32 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hnnn</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:32 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>Or kha log kea khen gy wasby waly</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:32 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hmm</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:32 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>yh to ni kha kesa lrka h yon h ap k bary mn to asa wesa kch ni kha</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:33 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hn SB drain Gy isi bat sy k log Kia kahian gy</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:33 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>hmm</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>pr logun ka kea krna h hum ny yh ni sochen gy hmari life h 😕</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Hmmm</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>ammi ny yh bh kha soch lo</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>wasby ki bt h</p>
+                    </div>
+                    <div class="chat-bubble left floating-slow">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Soch lo mtlab</p>
+                    </div>
+                    <div class="chat-bubble left floating">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Aadi:</span>
+                        <p>Acha</p>
+                    </div>
+                    <div class="chat-bubble right floating-slow">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>bs yhi bola</p>
+                    </div>
+                    <div class="chat-bubble right floating">
+                        <span class="chat-time">10/21/22, 8:34 PM</span>
+                        <span class="sender-name">Hira:</span>
+                        <p>ap ki ammi ka pta ni kea reaction 🥹</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heartfelt Closing Note -->
+            <div class="love-note-card floating">
+                <p>Sad na Howa krian Meri Jan aap is chat ko parh k sochain Konsa time mushkil ha pehly Wala ya ab Wala 😘😘😘</p>
+                <p class="highlight-line">Main tb b apni Heer k Sath tha aj b hon or hmesha rho ga 😘😘</p>
+            </div>
+        </section>
     </main>
 
     <script>
         const bgMusic = document.getElementById('bgMusic');
         const fireworkSound = document.getElementById('fireworkSound');
+        const cheerSound = document.getElementById('cheerSound');
 
-        // Generating Animated Hearts
+        // Generating Animated Background Hearts
         function createHearts() {
             const container = document.getElementById('hearts-container');
-            for (let i = 0; i < 30; i++) {
+            for (let i = 0; i < 35; i++) {
                 const heart = document.createElement('div');
                 heart.classList.add('heart');
                 heart.innerHTML = '❤️';
                 heart.style.left = Math.random() * 100 + 'vw';
                 heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+                heart.style.opacity = Math.random() * 0.5 + 0.1;
+                heart.style.fontSize = Math.random() * 20 + 12 + 'px';
                 container.appendChild(heart);
             }
         }
         createHearts();
 
+        let candleBlown = false;
+        const scrollWarning = document.getElementById('scroll-warning');
+
+        // Lock Scrolling Until Candles Blown
+        window.addEventListener('wheel', checkScroll, { passive: false });
+        window.addEventListener('touchmove', checkScroll, { passive: false });
+        window.addEventListener('keydown', function(e) {
+            if (['ArrowDown', 'PageDown', 'Space'].includes(e.code) && !candleBlown) {
+                e.preventDefault();
+                showWarning();
+            }
+        });
+
+        function checkScroll(e) {
+            if (!candleBlown) {
+                e.preventDefault();
+                showWarning();
+            }
+        }
+
+        function showWarning() {
+            scrollWarning.classList.add('show');
+            setTimeout(() => {
+                scrollWarning.classList.remove('show');
+            }, 2000);
+        }
+
+        // Microphone Blowing Detection
         async function initMicPermission() {
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                document.getElementById('micStatus').innerText = "🎙️ Mic Active! Phonk Marain 🌬️";
+                document.getElementById('micStatus').innerText = "🎙️ Mic Active! Phonk Marain (Blow into mic) 🌬️";
                 document.getElementById('micStatus').classList.remove('pulsing');
                 
-                // Mic permission milte hi music load kar dein
-                bgMusic.volume = 0.5;
-                
+                // Play Background Music once user grants permission
+                bgMusic.volume = 0.4;
+                bgMusic.play().catch(e => console.log("Audio waiting for user click"));
+
                 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
                 const analyser = audioContext.createAnalyser();
                 const microphone = audioContext.createMediaStreamSource(stream);
@@ -92,43 +444,82 @@
                 const dataArray = new Uint8Array(bufferLength);
 
                 function detectBlow() {
+                    if (candleBlown) return;
+
                     analyser.getByteFrequencyData(dataArray);
                     let sum = 0;
-                    for (let i = 0; i < bufferLength; i++) sum += dataArray[i];
+                    for (let i = 0; i < bufferLength; i++) {
+                        sum += dataArray[i];
+                    }
                     let average = sum / bufferLength;
 
-                    if (average > 50 && !candleBlown) { 
+                    if (average > 50) { 
                         extinguishCandles();
                     }
                     requestAnimationFrame(detectBlow);
                 }
+
                 detectBlow();
+
             } catch (err) {
-                document.getElementById('micStatus').innerText = "⚠️ Please Allow Mic Access!";
+                console.error('Mic access denied:', err);
+                document.getElementById('micStatus').innerText = "⚠️ Please Allow Microphone Access to Blow Candles!";
             }
         }
 
-        let candleBlown = false;
         function extinguishCandles() {
             candleBlown = true;
-            document.querySelectorAll('.flame').forEach(f => f.style.display = 'none');
-            
-            // Celebration Start
-            bgMusic.play();
-            fireworkSound.play();
-            
+            document.querySelectorAll('.flame').forEach(flame => {
+                flame.style.display = 'none';
+            });
+
+            // Play Fireworks & Clapping Sounds
+            fireworkSound.volume = 0.8;
+            cheerSound.volume = 0.7;
+            fireworkSound.play().catch(e => console.log(e));
+            cheerSound.play().catch(e => console.log(e));
+
+            // Ensure Music is playing
+            if (bgMusic.paused) bgMusic.play();
+
+            // Trigger Fireworks / Confetti
             triggerConfetti();
+
             document.body.classList.remove('no-scroll');
-            document.getElementById('micStatus').innerText = "🎉 Happy Birthday My Princess! 🎉";
+            document.getElementById('micStatus').innerText = "🎉 Yay! Happy Birthday My Princess! 🎉";
             
+            // Auto Scroll to Wishes Section
             setTimeout(() => {
                 document.getElementById('mainContent').style.opacity = '1';
+                document.getElementById('mainContent').style.transform = 'translateY(0)';
                 document.getElementById('wishSection').scrollIntoView({ behavior: 'smooth' });
             }, 800);
         }
 
         function triggerConfetti() {
-            // ... (confetti logic remains same as before)
+            var duration = 5000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 7,
+                    angle: 60,
+                    spread: 60,
+                    origin: { x: 0 },
+                    colors: ['#ff7eb3', '#ff758c', '#ffffff', '#fbc531']
+                });
+                confetti({
+                    particleCount: 7,
+                    angle: 120,
+                    spread: 60,
+                    origin: { x: 1 },
+                    colors: ['#ff7eb3', '#ff758c', '#ffffff', '#fbc531']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
         }
 
         window.addEventListener('DOMContentLoaded', initMicPermission);

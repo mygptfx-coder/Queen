@@ -77,7 +77,6 @@ body.no-scroll {
     100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 126, 179, 0); }
 }
 
-/* Ensure content stays above hearts */
 header, main, .scroll-warning {
     position: relative;
     z-index: 10;
